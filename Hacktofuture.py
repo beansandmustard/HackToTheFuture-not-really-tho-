@@ -8,7 +8,7 @@ import pygame as p, sys, time as t, pandas as pd, matplotlib.pyplot as plot
 #======================================initilization and startup=============================================#
 p.init() # initializing pygame
 surface = p.display.set_mode((1200, 1000))
-p.display.set_caption("De Guzzi") # ryan bruh moemnt
+p.display.set_caption("De Guzzi") # ryan bruh moemnt - displays de guzzi when u opne it bsacially
 FPS = p.time.Clock()
 #Images - loading images to be more specific
 time_travel = p.image.load("time-travel.png")
@@ -123,7 +123,7 @@ while running: # actual project - where it runs
         fig, ax2 = plot.subplots()
         data_debt = pd.read_csv("DebtData.csv", header=0)
         ax2.plot(data_debt['Date'], data_debt['National_Debt'], color='blue')
-        ax2.set_ylabel('Debt (USD)')
+        ax2.set_ylabel('Debt (USD in Ten Trillions)')
         ax2.set_xlabel('Year)')
         ax2.set_title('US NATIONAL DEBT')
         plot.savefig("debt_plot.png", format ='png') #saves debt plot temporarily
